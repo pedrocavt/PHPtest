@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
 
     //formato o cep
     let cep = value.value.replace("-", "");
-    if(cep.length < 9){
+    if(cep.length < 8){
 
         mensagem.innerHTML = "O CEP esta incompleto";
                 
