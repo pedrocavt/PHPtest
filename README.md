@@ -2,24 +2,13 @@
 
 Teste de seleção para vaga PHP
 
-## Faça um fork desse projeto e siga as intruções a seguir utilizando esse projeto.
+## Para rodar
 
-Construir uma aplicação web para buscar endereço. Aplicação deve fazer uma chamada na API via cep : https://viacep.com.br/.
-Premissas:
+ - Clone o projeto ou baixe o zip:
+    git clone https://github.com/pedrocavt/PHPtest.git
+ 
+ - Abra uma porta no terminal para rodar o php no browser:
+    php -S localhost:9000
 
-  ● Usar PHP 5.6 ou superior.
-  
-  ● Usar Bootstrap.
-  
-  ● JavaScript (Não usar framework).
-  
-  ● Retorno deve ser em xml.
-  
-  ● Salvar os dados em uma base e antes de uma nova consulta verificar se o cep já foi consultado, caso tenha sido, trazer    informação da base e não deve efetuar uma nova consulta.
-  
-  ● Tratar o erro. Dar um retorno amigável para usuário leigo.
-  
-  
-## PS: Valorizamos a criatividade no layout.
+Pronto, a aplicação já pode ser usada.
 
-Ao finalizar a programação publicar esse teste em seu github e nos encaminhar o link com as instruções de teste.
