@@ -9,7 +9,6 @@ form.addEventListener('submit', (e) => {
     let mensagem = document.createElement('p');
     result.innerHTML = '';
 
-
     //formato o cep
     let cep = value.value.replace("-", "");
     if(cep.length < 9){
@@ -24,8 +23,6 @@ form.addEventListener('submit', (e) => {
     dados = new FormData()
     dados.append('cep', cep)
 
-
-
     //mando o cep para a base para ver se ja foi consultado
     fetch("db/index.php", {
         method: 'POST',
@@ -36,7 +33,6 @@ form.addEventListener('submit', (e) => {
         })
         .then(function(data){
             
-
             //se já foi consultado ....
             if(data == "true" ){
 
