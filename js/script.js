@@ -5,15 +5,26 @@ form.addEventListener('submit', (e) => {
     //paro o submit
     e.preventDefault();
 
+    var result = document.querySelector(".result");  
+    let mensagem = document.createElement('p');
+    result.innerHTML = '';
+
+
     //formato o cep
     let cep = value.value.replace("-", "");
+    if(cep.length < 9){
+
+        mensagem.innerHTML = "O CEP esta incompleto";
+                
+        result.appendChild(mensagem);
+        
+        return;
+    }
 
     dados = new FormData()
     dados.append('cep', cep)
 
-    var result = document.querySelector(".result");
 
-    result.innerHTML = '';
 
     //mando o cep para a base para ver se ja foi consultado
     fetch("db/index.php", {
@@ -25,7 +36,6 @@ form.addEventListener('submit', (e) => {
         })
         .then(function(data){
             
-            let mensagem = document.createElement('p');
 
             //se já foi consultado ....
             if(data == "true" ){
